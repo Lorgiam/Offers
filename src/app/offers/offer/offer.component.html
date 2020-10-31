@@ -1,0 +1,36 @@
+<div class="card" style="margin: 5rem 21rem; width: 50%">
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <select class="custom-select">
+            <option selected>Open this select menu</option>
+            {{offers.length}}
+            <ng-template *ngFor="let offer of offers">
+              <option value="offer.value">
+                {{ offer.name }}
+              </option>
+            </ng-template>
+          </select>
+        </div>
+        <div class="col-sm">
+          <div class="row">
+            <div class="col-sm">
+              <label for="">ID Oferta:</label>
+              <span></span>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-sm"><label for="">Nombre:</label></div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-sm-5"><app-characteristics></app-characteristics></div>
+        <div class="offset-sm-1 col-sm-5"><app-prices></app-prices></div>
+      </div>
+    </div>
+  </div>
+</div>
